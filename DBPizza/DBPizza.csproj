@@ -72,6 +72,18 @@
     <Compile Include="client.cs">
       <DependentUpon>Pizza.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemForm.Designer.cs">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +107,12 @@
     </Compile>
     <Compile Include="payday.cs">
       <DependentUpon>Pizza.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayDayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayDayForm.Designer.cs">
+      <DependentUpon>PayDayForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Pizza.Context.cs">
       <AutoGen>True</AutoGen>
@@ -148,11 +166,20 @@
     <EmbeddedResource Include="CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemForm.resx">
+      <DependentUpon>ItemForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayDayForm.resx">
+      <DependentUpon>PayDayForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PositionForm.resx">
       <DependentUpon>PositionForm.cs</DependentUpon>

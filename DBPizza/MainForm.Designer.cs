@@ -106,6 +106,7 @@
             this.BtnClient.Size = new System.Drawing.Size(143, 45);
             this.BtnClient.TabIndex = 38;
             this.BtnClient.Text = "Клиенты";
+            this.BtnClient.Click += new System.EventHandler(this.BtnClient_Click);
             // 
             // BtnItem
             // 
@@ -121,6 +122,7 @@
             this.BtnItem.Size = new System.Drawing.Size(143, 45);
             this.BtnItem.TabIndex = 39;
             this.BtnItem.Text = "Товары";
+            this.BtnItem.Click += new System.EventHandler(this.BtnItem_Click);
             // 
             // BtnOrder
             // 
@@ -151,6 +153,7 @@
             this.BtnPayDay.Size = new System.Drawing.Size(143, 45);
             this.BtnPayDay.TabIndex = 41;
             this.BtnPayDay.Text = "Зарплаты";
+            this.BtnPayDay.Click += new System.EventHandler(this.BtnPayDay_Click);
             // 
             // BtnPosition
             // 

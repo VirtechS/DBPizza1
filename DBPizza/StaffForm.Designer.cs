@@ -439,7 +439,7 @@
             this.TxtCretFilter.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtCretFilter.HoverState.Parent = this.TxtCretFilter;
             this.TxtCretFilter.Location = new System.Drawing.Point(203, 50);
-            this.TxtCretFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCretFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtCretFilter.Name = "TxtCretFilter";
             this.TxtCretFilter.PasswordChar = '\0';
             this.TxtCretFilter.PlaceholderText = "";

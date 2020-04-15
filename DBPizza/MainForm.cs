@@ -58,5 +58,26 @@ namespace DBPizza
             this.Hide();
             CategoryForm.Show();
         }
+
+        private void BtnItem_Click(object sender, EventArgs e)
+        {
+            ItemForm ItemForm = new ItemForm();
+            this.Hide();
+            ItemForm.Show();
+        }
+
+        private void BtnPayDay_Click(object sender, EventArgs e)
+        {
+            PayDayForm PayDayForm = new PayDayForm();
+            this.Hide();
+            PayDayForm.Show();
+        }
+
+        private void BtnClient_Click(object sender, EventArgs e)
+        {
+            ClientForm ClientForm = new ClientForm();
+            this.Hide();
+            ClientForm.Show();
+        }
     }
 }
