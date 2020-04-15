@@ -22,7 +22,8 @@ namespace DBPizza
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-8FMQ1MB;Initial Catalog=pizza_dasha;Integrated Security=True");
+
+        readonly SqlConnection con = new SqlConnection("Data Source=DESKTOP-8FMQ1MB;Initial Catalog=pizza_dasha;Integrated Security=True");
 
         private void StaffForm_Load(object sender, EventArgs e)
         {
@@ -87,7 +88,7 @@ namespace DBPizza
 
         private void BtnFilter_Click(object sender, EventArgs e)
         {
-            System.Windows.Forms.DataGridViewColumn Col = default(System.Windows.Forms.DataGridViewColumn);
+            System.Windows.Forms.DataGridViewColumn Col = default;
             switch (LBoxFilter.SelectedIndex)
             {
                 case 0:
