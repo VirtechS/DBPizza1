@@ -120,7 +120,7 @@
             this.tableAdapterManager.clientTableAdapter = null;
             this.tableAdapterManager.itemTableAdapter = null;
             this.tableAdapterManager.order_itemTableAdapter = null;
-            this.tableAdapterManager.orderTableAdapter = null;
+            this.tableAdapterManager.ordersTableAdapter = null;
             this.tableAdapterManager.paydayTableAdapter = null;
             this.tableAdapterManager.positionTableAdapter = null;
             this.tableAdapterManager.staffTableAdapter = null;
