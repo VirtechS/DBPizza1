@@ -44,5 +44,12 @@ namespace DBPizza
             this.Hide();
             staffForm.Show();
         }
+
+        private void BtnPosition_Click(object sender, EventArgs e)
+        {
+            PositionForm PositionForm = new PositionForm();
+            this.Hide();
+            PositionForm.Show();
+        }
     }
 }

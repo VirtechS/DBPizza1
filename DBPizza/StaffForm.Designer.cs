@@ -67,10 +67,10 @@
             this.tableAdapterManager = new DBPizza.PizzaDataSetTableAdapters.TableAdapterManager();
             this.positionTableAdapter = new DBPizza.PizzaDataSetTableAdapters.positionTableAdapter();
             this.DGVStaff = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Login = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.position = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -242,7 +242,7 @@
             this.LblRBDes.Name = "LblRBDes";
             this.LblRBDes.Size = new System.Drawing.Size(204, 20);
             this.LblRBDes.TabIndex = 51;
-            this.LblRBDes.Text = "Сортировать по возростанию";
+            this.LblRBDes.Text = "Сортировать по убыванию";
             this.LblRBDes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LblRBDes.UseCompatibleTextRendering = true;
             // 
@@ -628,11 +628,6 @@
             this.DGVStaff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DGVStaff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // positionBindingSource
-            // 
-            this.positionBindingSource.DataMember = "position";
-            this.positionBindingSource.DataSource = this.pizzaDataSet;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
@@ -657,6 +652,11 @@
             this.position.HeaderText = "Должность";
             this.position.Name = "position";
             this.position.ValueMember = "id";
+            // 
+            // positionBindingSource
+            // 
+            this.positionBindingSource.DataMember = "position";
+            this.positionBindingSource.DataSource = this.pizzaDataSet;
             // 
             // fio
             // 

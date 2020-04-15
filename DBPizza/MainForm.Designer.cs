@@ -165,6 +165,7 @@
             this.BtnPosition.Size = new System.Drawing.Size(143, 45);
             this.BtnPosition.TabIndex = 42;
             this.BtnPosition.Text = "Должности";
+            this.BtnPosition.Click += new System.EventHandler(this.BtnPosition_Click);
             // 
             // BtnStaff
             // 
