@@ -90,6 +90,7 @@
             this.BtnCategory.Size = new System.Drawing.Size(143, 45);
             this.BtnCategory.TabIndex = 37;
             this.BtnCategory.Text = "Категории";
+            this.BtnCategory.Click += new System.EventHandler(this.BtnCategory_Click);
             // 
             // BtnClient
             // 

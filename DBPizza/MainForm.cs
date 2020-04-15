@@ -51,5 +51,12 @@ namespace DBPizza
             this.Hide();
             PositionForm.Show();
         }
+
+        private void BtnCategory_Click(object sender, EventArgs e)
+        {
+            CategoryForm CategoryForm = new CategoryForm();
+            this.Hide();
+            CategoryForm.Show();
+        }
     }
 }
