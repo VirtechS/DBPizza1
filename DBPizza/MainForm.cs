@@ -79,5 +79,12 @@ namespace DBPizza
             this.Hide();
             ClientForm.Show();
         }
+
+        private void BtnOrder_Click(object sender, EventArgs e)
+        {
+            OrderForm OrderForm = new OrderForm();
+            this.Hide();
+            OrderForm.Show();
+        }
     }
 }

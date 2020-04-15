@@ -138,6 +138,7 @@
             this.BtnOrder.Size = new System.Drawing.Size(143, 45);
             this.BtnOrder.TabIndex = 40;
             this.BtnOrder.Text = "Заказы";
+            this.BtnOrder.Click += new System.EventHandler(this.BtnOrder_Click);
             // 
             // BtnPayDay
             // 

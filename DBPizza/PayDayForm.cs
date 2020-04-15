@@ -25,14 +25,6 @@ namespace DBPizza
 
         readonly SqlConnection con = new SqlConnection("Data Source=DESKTOP-8FMQ1MB;Initial Catalog=pizza_dasha;Integrated Security=True");
 
-        private void paydayBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.paydayBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.pizzaDataSet);
-
-        }
-
         private void PayDayForm_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "pizzaDataSet.position". При необходимости она может быть перемещена или удалена.
@@ -95,7 +87,7 @@ namespace DBPizza
             switch (LBoxFilter.SelectedIndex)
             {
                 case 0:
-                    Col = fio;
+                    Col = staff_id;
                     break;
                 case 1:
                     Col = date1;
@@ -255,6 +247,12 @@ namespace DBPizza
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Requests requests = new Requests();
+            requests.Show();
         }
     }
 }
