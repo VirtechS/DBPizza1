@@ -254,5 +254,19 @@ namespace DBPizza
             Requests requests = new Requests();
             requests.Show();
         }
+
+        private void DGVPay_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            int sum = 0;
+            for (int i = 0; i < DGVPay.RowCount; i++)
+            {
+                sum += Convert.ToInt32(DGVPay.Rows[i].Cells[4].Value) * Convert.ToInt32(DGVPay.Rows[i].Cells[5].Value);
+                Convert.ToInt32(DGVPay.Rows[i].Cells[6].Value = sum);
+            }
+        }
     }
 }

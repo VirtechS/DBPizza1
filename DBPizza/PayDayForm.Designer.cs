@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayDayForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.BtnRoll = new System.Windows.Forms.PictureBox();
             this.BtnExit = new System.Windows.Forms.PictureBox();
@@ -42,6 +42,9 @@
             this.tableAdapterManager = new DBPizza.PizzaDataSetTableAdapters.TableAdapterManager();
             this.staffTableAdapter = new DBPizza.PizzaDataSetTableAdapters.staffTableAdapter();
             this.DGVPay = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.staffBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pizzaDataSet = new DBPizza.PizzaDataSet();
+            this.paydayBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.positionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.positionTableAdapter = new DBPizza.PizzaDataSetTableAdapters.positionTableAdapter();
@@ -70,9 +73,6 @@
             this.BrnBack = new Guna.UI2.WinForms.Guna2Button();
             this.BtnFirst = new Guna.UI2.WinForms.Guna2Button();
             this.GBoxCretFilter = new Guna.UI2.WinForms.Guna2GroupBox();
-            this.pizzaDataSet = new DBPizza.PizzaDataSet();
-            this.paydayBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.staffBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.staff_id = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.date1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,18 +80,19 @@
             this.hours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.payhours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.BtnRoll)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.paydayBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pizzaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paydayBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).BeginInit();
             this.GBoxFilter.SuspendLayout();
             this.GBoxAllFilter.SuspendLayout();
             this.GBoxCretFilter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pizzaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paydayBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -155,8 +156,8 @@
             // 
             // DGVPay
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DGVPay.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.DGVPay.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.DGVPay.AutoGenerateColumns = false;
             this.DGVPay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVPay.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -164,14 +165,14 @@
             this.DGVPay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVPay.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGVPay.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVPay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVPay.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DGVPay.ColumnHeadersHeight = 21;
             this.DGVPay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -182,21 +183,21 @@
             this.payhours,
             this.sum});
             this.DGVPay.DataSource = this.paydayBindingSource1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVPay.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVPay.DefaultCellStyle = dataGridViewCellStyle7;
             this.DGVPay.EnableHeadersVisualStyles = false;
             this.DGVPay.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DGVPay.Location = new System.Drawing.Point(16, 57);
             this.DGVPay.Name = "DGVPay";
             this.DGVPay.RowHeadersVisible = false;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVPay.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVPay.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.DGVPay.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVPay.Size = new System.Drawing.Size(860, 469);
             this.DGVPay.TabIndex = 63;
@@ -222,6 +223,22 @@
             this.DGVPay.ThemeStyle.RowsStyle.Height = 22;
             this.DGVPay.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DGVPay.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DGVPay.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVPay_CellValueChanged);
+            // 
+            // staffBindingSource1
+            // 
+            this.staffBindingSource1.DataMember = "staff";
+            this.staffBindingSource1.DataSource = this.pizzaDataSet;
+            // 
+            // pizzaDataSet
+            // 
+            this.pizzaDataSet.DataSetName = "PizzaDataSet";
+            this.pizzaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // paydayBindingSource1
+            // 
+            this.paydayBindingSource1.DataMember = "payday";
+            this.paydayBindingSource1.DataSource = this.pizzaDataSet;
             // 
             // staffBindingSource
             // 
@@ -659,26 +676,12 @@
             this.GBoxCretFilter.TabIndex = 79;
             this.GBoxCretFilter.Text = "Поиск по критериям";
             // 
-            // pizzaDataSet
-            // 
-            this.pizzaDataSet.DataSetName = "PizzaDataSet";
-            this.pizzaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // paydayBindingSource1
-            // 
-            this.paydayBindingSource1.DataMember = "payday";
-            this.paydayBindingSource1.DataSource = this.pizzaDataSet;
-            // 
-            // staffBindingSource1
-            // 
-            this.staffBindingSource1.DataMember = "staff";
-            this.staffBindingSource1.DataSource = this.pizzaDataSet;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
             this.idDataGridViewTextBoxColumn.HeaderText = "id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // staff_id
@@ -686,7 +689,7 @@
             this.staff_id.DataPropertyName = "staff_id";
             this.staff_id.DataSource = this.staffBindingSource1;
             this.staff_id.DisplayMember = "ФИО";
-            this.staff_id.HeaderText = "staff_id";
+            this.staff_id.HeaderText = "Сотрудник";
             this.staff_id.Name = "staff_id";
             this.staff_id.ValueMember = "id";
             // 
@@ -720,12 +723,28 @@
             this.sum.HeaderText = "Сумма выплат";
             this.sum.Name = "sum";
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
+            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.HoverState.Parent = this.guna2Button2;
+            this.guna2Button2.Location = new System.Drawing.Point(726, 18);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
+            this.guna2Button2.Size = new System.Drawing.Size(150, 33);
+            this.guna2Button2.TabIndex = 84;
+            this.guna2Button2.Text = "Расчитать сумму";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // PayDayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1144, 700);
+            this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.GBoxAllFilter);
             this.Controls.Add(this.BtnLast);
             this.Controls.Add(this.BtnNext);
@@ -752,14 +771,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.paydayBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pizzaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.paydayBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.positionBindingSource)).EndInit();
             this.GBoxFilter.ResumeLayout(false);
             this.GBoxAllFilter.ResumeLayout(false);
             this.GBoxCretFilter.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pizzaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.paydayBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -804,13 +823,14 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.BindingSource paydayBindingSource1;
         private PizzaDataSet pizzaDataSet;
+        private System.Windows.Forms.BindingSource staffBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewComboBoxColumn staff_id;
-        private System.Windows.Forms.BindingSource staffBindingSource1;
         private System.Windows.Forms.DataGridViewTextBoxColumn date1;
         private System.Windows.Forms.DataGridViewTextBoxColumn date2;
         private System.Windows.Forms.DataGridViewTextBoxColumn hours;
         private System.Windows.Forms.DataGridViewTextBoxColumn payhours;
         private System.Windows.Forms.DataGridViewTextBoxColumn sum;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }

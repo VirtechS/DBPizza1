@@ -60,17 +60,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="category.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
-    </Compile>
     <Compile Include="CategoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CategoryForm.Designer.cs">
       <DependentUpon>CategoryForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="client.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
     </Compile>
     <Compile Include="ClientForm.cs">
       <SubType>Form</SubType>
@@ -96,29 +90,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="item.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="order.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OrderForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrderForm.Designer.cs">
-      <DependentUpon>OrderForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Orders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Orders.Designer.cs">
-      <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
     <Compile Include="OrdersForm.cs">
       <SubType>Form</SubType>
@@ -126,43 +102,16 @@
     <Compile Include="OrdersForm.Designer.cs">
       <DependentUpon>OrdersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="order_item.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
-    </Compile>
-    <Compile Include="payday.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
-    </Compile>
     <Compile Include="PayDayForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PayDayForm.Designer.cs">
       <DependentUpon>PayDayForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pizza.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Pizza.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Pizza.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Pizza.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Pizza.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Pizza.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="PizzaDataSet.cs">
-      <DependentUpon>PizzaDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="PizzaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PizzaDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="position.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
     </Compile>
     <Compile Include="PositionForm.cs">
       <SubType>Form</SubType>
@@ -178,23 +127,11 @@
     <Compile Include="Requests.Designer.cs">
       <DependentUpon>Requests.cs</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
-    </Compile>
-    <Compile Include="staff.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
-    </Compile>
     <Compile Include="StaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StaffForm.Designer.cs">
       <DependentUpon>StaffForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Pizza.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CategoryForm.resx">
       <DependentUpon>CategoryForm.cs</DependentUpon>
@@ -210,12 +147,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrderForm.resx">
-      <DependentUpon>OrderForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Orders.resx">
-      <DependentUpon>Orders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdersForm.resx">
       <DependentUpon>OrdersForm.cs</DependentUpon>
@@ -241,14 +172,7 @@
     <EmbeddedResource Include="StaffForm.resx">
       <DependentUpon>StaffForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Pizza.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Pizza.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="packages.config" />
-    <None Include="Pizza.edmx.diagram">
-      <DependentUpon>Pizza.edmx</DependentUpon>
-    </None>
     <None Include="PizzaDataSet.xsc">
       <DependentUpon>PizzaDataSet.xsd</DependentUpon>
     </None>
@@ -272,18 +196,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Pizza.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Pizza.Context.cs</LastGenOutput>
-      <DependentUpon>Pizza.edmx</DependentUpon>
-    </Content>
-    <Content Include="Pizza.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Pizza.edmx</DependentUpon>
-      <LastGenOutput>Pizza.cs</LastGenOutput>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

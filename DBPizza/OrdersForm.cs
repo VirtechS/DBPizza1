@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,10 @@ namespace DBPizza
         {
             InitializeComponent();
         }
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void OrdersForm_Load(object sender, EventArgs e)
         {
@@ -40,7 +45,7 @@ namespace DBPizza
             else
                 dgvEmpCompany.DataSource = (dgvEmpCompany.DataSource as DataTable).Clone();
             inOrderID = 0;
-            btnSave.Text = "Save";
+            btnSave.Text = "Сохранить";
             btnDelete.Enabled = false;
         }
         void StaffComboBoxFill()
@@ -98,7 +103,7 @@ namespace DBPizza
             DataGridViewRow dgvRow = dgvEmpCompany.CurrentRow;
             if (dgvRow.Cells["dgvtxtOrderItemID"].Value != DBNull.Value)
             {
-                if (MessageBox.Show("Are You Sure to Delete this Record ?", "Master Detail CRUD", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show("Вы точно хотите удалить  ?", "Операция удаления", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (SqlConnection sqlCon = new SqlConnection(strConnectionString))
                     {
@@ -187,7 +192,7 @@ namespace DBPizza
         }
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you Sure to Delete this Record ?", "Master Detail CRUD", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Вы точно хотите удалить ?", "Операция удаления", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 using (SqlConnection sqlCon = new SqlConnection(strConnectionString))
                 {
@@ -198,7 +203,7 @@ namespace DBPizza
                     sqlCmd.ExecuteNonQuery();
                     Clear();
                     FillEmployeeDataGridView();
-                    MessageBox.Show("Deleted Successfully");
+                    MessageBox.Show("Удалено");
                 };
             }
         }
@@ -249,19 +254,51 @@ namespace DBPizza
         }
         private void dgvEmpCompany_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void dgvEmpCompany_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            decimal sum = 0;
+            for (int i = 0; i < dgvEmpCompany.RowCount; i++)
+            {
+                sum += Convert.ToInt32(dgvEmpCompany.Rows[i].Cells[4].Value);
+            }
+        }
+
+        private void btnsum_Click(object sender, EventArgs e)
+        {
             int sum = 0;
-            decimal sumd = 0;
             for (int i = 0; i < dgvEmpCompany.RowCount; i++)
             {
                 sum += Convert.ToInt32(dgvEmpCompany.Rows[i].Cells[2].Value) * Convert.ToInt32(dgvEmpCompany.Rows[i].Cells[3].Value);
                 Convert.ToInt32(dgvEmpCompany.Rows[i].Cells[4].Value = sum);
             }
-            for (int i = 0; i < dgvEmpCompany.RowCount; i++)
-            {
-                sumd += Convert.ToInt32(dgvEmpCompany.Rows[i].Cells[4].Value);
-            }
             string back = sum.ToString();
             txtTotal.Text = back;
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnroll_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void OrdersForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = new MainForm();
+            this.Hide();
+            mainForm.Show();
         }
     }
 }
