@@ -304,7 +304,6 @@
           <Property Name="item_id" Type="Int64" Nullable="false" />
           <Property Name="oredr_id" Type="Int64" Nullable="false" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
-          <Property Name="title" Type="String" MaxLength="90" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="price" Type="Int32" Nullable="false" />
           <Property Name="total" Type="Int32" />
           <NavigationProperty Name="item" Relationship="Self.FK_order_item_item1" FromRole="order_item" ToRole="item" />
@@ -574,7 +573,6 @@
                 <ScalarProperty Name="item_id" ColumnName="item_id" />
                 <ScalarProperty Name="oredr_id" ColumnName="oredr_id" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />
-                <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="price" ColumnName="price" />
                 <ScalarProperty Name="total" ColumnName="total" />
               </MappingFragment>

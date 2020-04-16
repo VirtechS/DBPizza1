@@ -120,6 +120,12 @@
     <Compile Include="Orders.Designer.cs">
       <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="order_item.cs">
       <DependentUpon>Pizza.tt</DependentUpon>
     </Compile>
@@ -146,6 +152,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Pizza.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PizzaDataSet.cs">
+      <DependentUpon>PizzaDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PizzaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -207,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Orders.resx">
       <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PayDayForm.resx">
       <DependentUpon>PayDayForm.cs</DependentUpon>

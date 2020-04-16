@@ -82,9 +82,9 @@ namespace DBPizza
 
         private void BtnOrder_Click(object sender, EventArgs e)
         {
-            OrderForm OrderForm = new OrderForm();
+            OrdersForm OrdersForm = new OrdersForm();
             this.Hide();
-            OrderForm.Show();
+            OrdersForm.Show();
         }
     }
 }
