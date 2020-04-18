@@ -160,7 +160,7 @@ namespace DBPizza
                 }
                 FillEmployeeDataGridView();
                 Clear();
-                MessageBox.Show("Submitted Successfully");
+                MessageBox.Show("Выполнено успешно");
             }
         }
         bool ValidateMasterDetailForm()
