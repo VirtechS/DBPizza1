@@ -27,7 +27,7 @@ namespace DBPizza
         private void ClientForm_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "pizzaDataSet.client". При необходимости она может быть перемещена или удалена.
-            this.clientTableAdapter.Fill(this.pizzaDataSet.client);
+            this.clientTableAdapter.Fill(this.pizzaDataSet.client); 
             this.DGVClients.ReadOnly = true;
             TxtAllFilter.Text = "Введите текст";
             TxtCretFilter.Text = "Введите текст";
